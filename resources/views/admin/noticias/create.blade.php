@@ -1,14 +1,12 @@
 @extends('layouts.admin')
-@section("contenido_principal")
-    <a href="{{ route("admin.noticias.index") }}">Volver a lista de noticias</a>
-    <h1></h1>
-  
+@section("contenido_principal")  
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1>Noticias</h1>
+            <a href="{{ route("admin.noticias.index") }}">Volver a lista de noticias</a>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -40,25 +38,25 @@
                 @csrf
                 <div class="form-group">
                     <label>Titulo:</label>
-                     <input name="titulo" type="text">
+                     <input class="form-control" name="titulo" type="text">
                  </div>
                  <div class="form-group">
                     <label>Fecha:</label>
-                    <input name="fecha" type="date">
+                    <input class="form-control" name="fecha" type="date">
                  </div>
                  <div class="form-group">
                     <label>Autor:</label>
-                    <input name="autor" type="text">
+                    <input class="form-control" name="autor" type="text">
                  </div>
                  <div  class="form-group">
                  <label>Cuerpo:</label>
-                 <textarea rows="5" name="cuerpo"></textarea>
+                 <textarea class="form-control" rows="5" name="cuerpo"></textarea>
                  </div>
                  <div class="form-group">
                     <label>Foto</label>
-                    <input name="foto" type="text">
+                    <input class="form-control" name="foto" type="text">
                  </div>
-                 <button type="submit">Agregar nueva noticia</button>
+                 <button type="submit" class="btn btn-primary">Agregar nueva noticia</button>
              </form>
         </div>
         <!-- /.card-body -->
