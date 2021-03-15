@@ -1,4 +1,5 @@
 @extends('layouts.admin')
+@section("titulo","Nueva noticia")
 @section("contenido_principal")  
     <!-- Content Header (Page header) -->
     <section class="content-header">
