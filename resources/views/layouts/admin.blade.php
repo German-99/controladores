@@ -73,7 +73,9 @@
             <li class="nav-item">
               <a href="{{route("admin.tablero")}}" class="nav-Link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>Tablero</p>
+                <p>
+                  Tablero
+                </p>
               </a>
             </li>
                <li class="nav-item has-treeview">
