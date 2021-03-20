@@ -60,6 +60,12 @@
        <![endif]-->
    </head>
 <body>
+    <h1>Noticias</h1>
+    @foreach($noticias as $noticia)
+        <h3><a href="{{route("noticias.detalles",$noticia->id)}}">{{ $noticia->titulo }}</a></h3>
+        <p>{{ $noticia->fecha }}</p>
+        <p>{{ $noticia->autor }}</p>
+    @endforeach
 ----------------------------------------------------
     <section class="section">
         <div class="container">
@@ -76,9 +82,9 @@
                                         @foreach($noticias as $noticia)
                                                 <a href="{{route("noticias.detalles",$noticia->id)}}" title="">
                                                     @if($noticia->foto != NULL)
-                                                    <img src="{{$noticia->foto}}" style="width: 800px; height: auto;" alt="" class="img-fluid">
+                                                    <img src="{{$noticia->foto}}" style="width: 300px; height: auto;" alt="" class="img-fluid">
                                                     @else
-                                                    <img src="/assets/img/logo-noticias.jpg" style="width: 800px; height: auto;" alt="" class="img-fluid">
+                                                    <img src="/assets/img/logo-noticias.jpg" style="width: 300px; height: auto;" alt="" class="img-fluid">
                                                     @endif
                                                 </a>
                                         @endforeach
@@ -87,8 +93,8 @@
                                 <div class="blog-meta big-meta col-md-8">
                                     @foreach($noticias as $noticia)
                                         <h4><a href="{{route("noticias.detalles",$noticia->id)}}" title="">{{ $noticia->titulo }}</a></h4>
-                                        <small><p>{{ $noticia->fecha }}</p></small>
-                                        <small><p>{{ $noticia->autor }}</p></small>
+                                        <small><a href="{{route("noticias.detalles",$noticia->id)}}" title="">{{ $noticia->fecha }}</a></small>
+                                        <small><a href="{{route("noticias.detalles",$noticia->id)}}"  title="">{{ $noticia->autor }}</a></small>
                                     @endforeach
                                 </div><!-- end meta -->
                             </div>
@@ -97,7 +103,6 @@
                 </div>
             </div>
         </div>
-    </section>
         <script src="js/jquery.min.js"></script>
         <script src="js/tether.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
