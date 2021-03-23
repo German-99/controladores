@@ -1,5 +1,5 @@
 @extends('layouts.nav')
-@section("titulo","Inicio")
+@section("titulo","INoticias")
 <!DOCTYPE html>
 <html lang="en">
     <head>
